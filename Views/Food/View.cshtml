@@ -1,0 +1,72 @@
+﻿@model ViewModels.Models.DiaryViewModel
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm("Add_Food", "Actions"))
+{
+    <table>
+        <tbody style="background-color: #f1cf31" />
+        <tr>
+
+            <td>
+                <input type="hidden" id="Fooddate" name="Fooddate" />@Html.Label("What did you eat?")</td>
+            <td>@Html.Label("Description")</td>
+            <td>@Html.Label("When?")</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <input id="tags" name="Food" maxlength="40" size="50" onclick=" this.value = ''; " placeholder="Generic Calories 100 cals |- 100 cals per 100 calories" /></td>
+            <td>
+                <input id="QuantityId" name="Quantity" value="1" size="4" /></td>
+            <td>@Html.DropDownListFor( m => m.MealTimeId, Model.MealTimes, "[Please select an author]" )
+            </td>
+            <td>
+                <input type="submit" value="Add food" /></td>
+        </tr>
+    </table>
+}
+
+<table>
+    <tr>
+        <th>Food</th>
+    </tr>
+    
+@foreach (var item in Model.Foods) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Description)
+                @Html.DisplayFor(model => item.DateEaten)
+                @Html.ActionLink("Edit", "Edit", new {  id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+</table>
+<table>
+    <tr>
+        <th>Exercise</th>
+    </tr>
+    @foreach (var item in Model.Exercises) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Description)
+                @Html.DisplayFor(model => item.Calories)
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+</table>
+
+
