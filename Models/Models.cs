@@ -5,6 +5,21 @@ using System.Web;
 
 namespace ViewModels.Models
 {
+
+    //
+    //  Main class that contains all the info needed for each day the user keeps a record
+    //
+    public class DayBook
+    {
+        public long Id { get; set; }
+        public DateTime DateTime { get; set; }
+        public string UserName { get; set; }
+        //  Use the virtual keywork for foriegn keys
+        public virtual long FoodId { get; set; }
+        public virtual long ExerciseId { get; set; }
+        public virtual long GenericCalorieId { get; set; }
+    }
+
     public class Food
     {
         [Key]
@@ -23,7 +38,7 @@ namespace ViewModels.Models
     public class Exercise
     {
         [Key]
-        public long Id { get; set; }
+        public long ExerciseId { get; set; }
 
         public DateTime DateExercised { get; set; }
         public string Description { get; set; }
@@ -33,7 +48,7 @@ namespace ViewModels.Models
     public class GenericCalorie
     {
         [Key]
-        public long Id { get; set; }
+        public long GenericCalorieId { get; set; }
 
         public DateTime DateEaten { get; set; }
         public string Description { get; set; }

@@ -170,37 +170,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201302200635514_InitialCreate.cs" />
-    <Compile Include="Migrations\201302200635514_InitialCreate.Designer.cs">
-      <DependentUpon>201302200635514_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201302200654320_date.cs" />
-    <Compile Include="Migrations\201302200654320_date.Designer.cs">
-      <DependentUpon>201302200654320_date.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201302200752304_3.cs" />
-    <Compile Include="Migrations\201302200752304_3.Designer.cs">
-      <DependentUpon>201302200752304_3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201302200754389_4.cs" />
-    <Compile Include="Migrations\201302200754389_4.Designer.cs">
-      <DependentUpon>201302200754389_4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201302200756270_Amended Exercise table.cs" />
-    <Compile Include="Migrations\201302200756270_Amended Exercise table.Designer.cs">
-      <DependentUpon>201302200756270_Amended Exercise table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201302201141052_Added Mealtime.cs" />
-    <Compile Include="Migrations\201302201141052_Added Mealtime.Designer.cs">
-      <DependentUpon>201302201141052_Added Mealtime.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201302201411119_5.cs" />
-    <Compile Include="Migrations\201302201411119_5.Designer.cs">
-      <DependentUpon>201302201411119_5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201302201911161_Added Generic cals.cs" />
-    <Compile Include="Migrations\201302201911161_Added Generic cals.Designer.cs">
-      <DependentUpon>201302201911161_Added Generic cals.cs</DependentUpon>
+    <Compile Include="Migrations\201302211756202_initial.cs" />
+    <Compile Include="Migrations\201302211756202_initial.Designer.cs">
+      <DependentUpon>201302211756202_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -283,7 +255,9 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -333,6 +307,7 @@
     <Content Include="Views\Exercise\Edit.cshtml" />
     <Content Include="Views\Exercise\Delete.cshtml" />
     <Content Include="Views\Food\View.cshtml" />
+    <Content Include="Views\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -341,29 +316,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201302200635514_InitialCreate.resx">
-      <DependentUpon>201302200635514_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201302200654320_date.resx">
-      <DependentUpon>201302200654320_date.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201302200752304_3.resx">
-      <DependentUpon>201302200752304_3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201302200754389_4.resx">
-      <DependentUpon>201302200754389_4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201302200756270_Amended Exercise table.resx">
-      <DependentUpon>201302200756270_Amended Exercise table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201302201141052_Added Mealtime.resx">
-      <DependentUpon>201302201141052_Added Mealtime.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201302201411119_5.resx">
-      <DependentUpon>201302201411119_5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201302201911161_Added Generic cals.resx">
-      <DependentUpon>201302201911161_Added Generic cals.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201302211756202_initial.resx">
+      <DependentUpon>201302211756202_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

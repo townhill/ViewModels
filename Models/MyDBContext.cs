@@ -20,5 +20,7 @@ namespace ViewModels.Models
         public DbSet<Food> Foods { get; set; }
 
         public DbSet<Exercise> Exercises { get; set; }
+
+        public DbSet<DayBook> DayBooks { get; set; }
     }
 }

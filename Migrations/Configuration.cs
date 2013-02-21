@@ -9,7 +9,7 @@ namespace ViewModels.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(ViewModels.Models.MyDBContext context)
